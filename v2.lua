@@ -59,10 +59,10 @@ On.MouseButton1Down:Connect(function()
 	turnedon = not turnedon
 	if turnedon then
 		On.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-		On.Text = "Chat Troll off"
+		On.Text = "Chat Troll on"
 	else
 		On.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-		On.Text = "Chat Troll on"
+		On.Text = "Chat Troll off"
 	end
 end)
 
