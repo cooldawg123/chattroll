@@ -1,5 +1,6 @@
 -- made by rurur123
 
+print("update")
 
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("ImageLabel")
@@ -168,6 +169,6 @@ OnMessageEvent.OnClientEvent:Connect(function(data)
 	if player == lp then return end
 	local message = tostring(data.Message)
 	if (message):len() <= (ChatLegth-7) then
-		SayMessageRequest:FireServer(('\"%s\"%s'):format(message,"j\239\191\180u\239\191\180s\239\191\180t\239\191\180\bs\239\191\180t\239\191\180o\239\191\180p\239\191\180\bf\239\191\180\239\191\180u\239\191\180\239\191\180c\239\191\180\239\191\180k\239\191\180\239\191\180i\239\191\180\239\191\180n\239\191\180g\239\191\180\239\191\180\bt\239\191\180a\239\191\180l\239\191\180k\239\191\180i\239\191\180n\239\191\180g\239\191\180\bp\239\191\180l\239\191\180e\239\191\180a\239\191\180s\239\191\180e\239\191\180\239\191\180\239\191\180"),tostring(data.OriginalChannel))
+		SayMessageRequest:FireServer(('\"%s\"%s'):format(message,"s\239\191\178h\239\191\178u\239\191\178t\239\191\178\239\191\178\4t\239\191\178h\239\191\178e\239\191\178\239\191\178\4f\239\191\178\239\191\178u\239\191\178\239\191\178c\239\191\178\239\191\178k\239\191\178\239\191\178\239\191\178\4u\239\191\178p\239\191\178\239\191\178\4a\239\191\178nd\24never\24talk\24again\239\191\178\239\191\178"),tostring(data.OriginalChannel))
 	end
 end)
