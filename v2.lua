@@ -1,6 +1,6 @@
 -- made by rurur123
 
-print("update")
+print("update2")
 
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("ImageLabel")
@@ -171,4 +171,21 @@ OnMessageEvent.OnClientEvent:Connect(function(data)
 	if (message):len() <= (ChatLegth-7) then
 		SayMessageRequest:FireServer(('\"%s\"%s'):format(message,"s\239\191\178h\239\191\178u\239\191\178t\239\191\178\239\191\178\4t\239\191\178h\239\191\178e\239\191\178\239\191\178\4f\239\191\178\239\191\178u\239\191\178\239\191\178c\239\191\178\239\191\178k\239\191\178\239\191\178\239\191\178\4u\239\191\178p\239\191\178\239\191\178\4a\239\191\178nd\24never\24talk\24again\239\191\178\239\191\178"),tostring(data.OriginalChannel))
 	end
+end)
+
+
+local dragging = false
+local dragStartPos, startPos
+
+Frame.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = true
+        dragStartPos = input.Position
+        startPos = Frame.Position
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
 end)
